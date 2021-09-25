@@ -19,7 +19,7 @@
             <x-social-link url="https://twitter.com/ProjectGtx" icon="img/twitter.png"></x-social-link>
             <x-social-link url="https://t.me/projectbiosphere" icon="img/telegram.png"></x-social-link>
             <x-social-link url="https://www.facebook.com/Project-Biosphere-101656958953109" icon="img/facebook.png"></x-social-link>
-            <x-social-link url="https://www.instagram.com/projectbiosphere" icon="img/instagram.png"></x-social-link>
+            <x-social-link url="https://vt.tiktok.com/ZSeJSCGK8" icon="img/instagram.png"></x-social-link>
             <x-social-link url="https://www.tiktok.com/@projectbiophere" icon="img/tiktok.png"></x-social-link>
             <x-social-link url="https://www.youtube.com/channel/UCzwOeuMgvJu62Q5nviktXdw" icon="img/youtube.png"></x-social-link>
         </div>
