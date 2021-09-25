@@ -1,5 +1,5 @@
 <x-main-layout>
-    <div class="container mx-auto">
+    <div class="container m-auto">
         <div class="flex flex-col justify-center items-center w-full">
             <x-content-box>
                 <h2 class="font-bold text-glow text-yellow-100 uppercase">

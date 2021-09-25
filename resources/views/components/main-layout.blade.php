@@ -13,15 +13,15 @@
 
 <body class="min-h-screen bg-forest bg-cover bg-no-repeat relative">
     <x-nav></x-nav>
-    <main class="p-4">
+    <main class="p-4 flex flex-col min-h-screen justify-between">
         {{$slot}}
-        <div class="flex flex-row p-4 space-x-2 md:px-28 lg:px-96">
-            <x-social-link url="#" icon="img/twitter.png"></x-social-link>
-            <x-social-link url="#" icon="img/telegram.png"></x-social-link>
-            <x-social-link url="#" icon="img/facebook.png"></x-social-link>
-            <x-social-link url="#" icon="img/instagram.png"></x-social-link>
-            <x-social-link url="#" icon="img/tiktok.png"></x-social-link>
-            <x-social-link url="#" icon="img/youtube.png"></x-social-link>
+        <div class="flex flex-row p-4 space-x-2 md:px-28 md:max-w-xl mx-auto">
+            <x-social-link url="https://twitter.com/ProjectGtx" icon="img/twitter.png"></x-social-link>
+            <x-social-link url="https://t.me/projectbiosphere" icon="img/telegram.png"></x-social-link>
+            <x-social-link url="https://www.facebook.com/Project-Biosphere-101656958953109" icon="img/facebook.png"></x-social-link>
+            <x-social-link url="https://www.instagram.com/projectbiosphere" icon="img/instagram.png"></x-social-link>
+            <x-social-link url="https://www.tiktok.com/@projectbiophere" icon="img/tiktok.png"></x-social-link>
+            <x-social-link url="https://www.youtube.com/channel/UCzwOeuMgvJu62Q5nviktXdw" icon="img/youtube.png"></x-social-link>
         </div>
     </main>
     @livewireScripts

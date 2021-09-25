@@ -1,6 +1,6 @@
 <x-main-layout>
-    <div class="container mx-auto">
-        <div class="flex flex-col justify-center items-center w-full min-h-screen">
+    <div class="container mx-auto my-auto">
+        <div class="flex flex-col justify-center items-center w-full">
             <x-content-box icon="img/liam.png">
                 <h2 class="font-bold text-glow text-yellow-100 uppercase">
                     Features
