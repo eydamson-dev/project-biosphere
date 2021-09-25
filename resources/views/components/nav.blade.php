@@ -18,7 +18,7 @@
 
         <div :class="show ? 'show' : 'hidden'" class="text-yellow-100 bg-yellow-900 bg-opacity-75 md:bg-transparent md:bg-opacity-100 h-full flex flex-col justify-center items-stretch md:mt-4 md:block md:flex-row">
             <x-nav-link url="/" name="home">Home</x-nav-link>
-            <x-nav-link url="#" name="white-papers">White Papers</x-nav-link>
+            <x-nav-link url="/white-paper.pdf" target="_blank" name="white-papers">White Papers</x-nav-link>
             <x-nav-link url="/features" name="features">Features</x-nav-link>
             <x-nav-link url="/tokenomics" name="tokenomics">Tokenomics</x-nav-link>
             <x-nav-link url="/roadmap" name="roadmap">Roadmap</x-nav-link>

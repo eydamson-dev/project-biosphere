@@ -1,1 +1,1 @@
-<a href="{{$url}}" class="py-4 px-3 border-yellow-100 md:border-2 md:rounded-md md:py-1 md:bg-yellow-500 md:bg-opacity-50 hover:text-green-300 hover:border-b-4 font-semibold {{request()->is('$name') ? 'border-b-4':''}}">{{$slot}}</a>
+<a href="{{$url}}" target="{{$target}}" class="py-4 px-3 border-yellow-100 md:border-2 md:rounded-md md:py-1 md:bg-yellow-500 hover:bg-green-500 hover:border-b-4 font-semibold {{request()->is('$name') ? 'border-b-4':''}}">{{$slot}}</a>

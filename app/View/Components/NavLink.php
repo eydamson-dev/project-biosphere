@@ -8,15 +8,17 @@ class NavLink extends Component
 {
     public $name;
     public $url;
+    public $target;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name, $url)
+    public function __construct($name, $url, $target='')
     {
         $this->name = $name;
         $this->url = $url;
+        $this->target = $target;
     }
 
     /**
