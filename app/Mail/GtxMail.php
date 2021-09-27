@@ -19,10 +19,10 @@ class GtxMail extends Mailable
      *
      * @return void
      */
-    public function __construct($gtxAmount, $bitcoinAmount)
+    public function __construct($bitcoinAmount, $gtxAmount)
     {
-        $this->gtxAmount = $gtxAmount;
         $this->bitcoinAmount = $bitcoinAmount;
+        $this->gtxAmount = $gtxAmount;
     }
 
     /**

@@ -9,14 +9,14 @@
                 <span class="uppercase text-2xl text-glow">buy gtx</span>
                 <span class="uppercase text-xl text-glow mt-5">gtx amount</span>
                 <div class="flex flex-col text-center items-stretch justify-center">
-                    <input wire:model="bitcoinAmount" class="text-center bg-transparent border-0 border-b-2" type="number" />
+                    <input wire:model.debounce.300ms="gtxAmount" class="text-center bg-transparent border-0 border-b-2" type="number" />
                     <span class="text-sm font-light text-white bg-red-500">
                         @error('bitcoinAmount')
                         {{$message}}
                         @enderror
                     </span>
                     <span class="uppercase text-xl mt-5">bitcoin deposite amount</span>
-                    <span class="text-center">{{$this->gtx}}</span>
+                    <span class="text-center">{{$this->bitcoin}}</span>
                 </div>
 
                 <div class="flex flex-col items-center justify-center mt-5">

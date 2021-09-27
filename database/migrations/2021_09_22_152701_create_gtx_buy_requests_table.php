@@ -16,8 +16,8 @@ class CreateGtxBuyRequestsTable extends Migration
         Schema::create('gtx_buy_requests', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('bitcoin_amount');
-            $table->string('gtx_convertion');
+            $table->string('gtx_amount');
+            $table->string('bitcoin_rate');
             $table->string('buyer_email');
             $table->string('referral_email')->nullable();
         });

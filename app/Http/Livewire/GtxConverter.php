@@ -2,21 +2,21 @@
 
 namespace App\Http\Livewire;
 
+use AmrShawky\LaravelCurrency\Facade\Currency;
 use App\Mail\GtxMail;
 use App\Models\GtxBuyRequest;
+use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\Mail;
 use Livewire\Component;
 
 class GtxConverter extends Component
 {
-    // per bitcoin
-    public $gtxPrice = 0.000022;
-    public $bitcoinAmount = 0;
+    public $gtxAmount = 0;
     public $email;
     public $referral;
 
     protected $rules = [
-        'bitcoinAmount' => 'required|numeric|min:1',
+        'gtxAmount' => 'required|numeric|min:1',
         'email' => 'required|email',
     ];
 
@@ -24,23 +24,37 @@ class GtxConverter extends Component
     {
         $this->validate();
         GtxBuyRequest::create([
-            'bitcoin_amount' => $this->bitcoinAmount,
-            'gtx_convertion' => sprintf('%f', $this->gtxPrice),
+            'gtx_amount' => $this->gtxAmount,
+            'bitcoin_rate' => sprintf('%f', $this->getBitCoinRate()),
             'buyer_email' => $this->email,
             'referral_email' => $this->referral
         ]);
 
-        Mail::to($this->email)->send(new GtxMail($this->getGtxProperty(), $this->bitcoinAmount));
+        Mail::to($this->email)->send(new GtxMail($this->getBitcoinProperty(), $this->gtxAmount));
 
         session()->flash('message', 'Request sent. You may check your email for details.');
 
         return  redirect()->to('/request-sent');
     }
 
-    public function getGtxProperty()
+    public function getBitCoinRate() {
+
+        $btcRate = cache()->remember("BTC", now()->addSeconds(30), function() {
+            $rate = Currency::rates()
+                    ->historical(Date::now())
+                    ->symbols(['BTC'])
+                    ->get();
+
+            return $rate['BTC'];
+        });
+
+        return $btcRate;
+    }
+
+    public function getBitcoinProperty()
     {
-        $amount = $this->bitcoinAmount;
-        $result = (float)$amount * $this->gtxPrice;
+        $amount = $this->gtxAmount;
+        $result = (float)$amount * $this->getBitCoinRate();
 
         return sprintf('%f', $result);
     }
