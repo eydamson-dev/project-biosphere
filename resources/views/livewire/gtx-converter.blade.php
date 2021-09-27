@@ -15,7 +15,7 @@
                         {{$message}}
                         @enderror
                     </span>
-                    <span class="uppercase text-xl mt-5">bitcoind deposite amount</span>
+                    <span class="uppercase text-xl mt-5">bitcoin deposite amount</span>
                     <span class="text-center">{{$this->gtx}}</span>
                 </div>
 
