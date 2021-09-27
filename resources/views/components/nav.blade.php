@@ -1,9 +1,9 @@
-<nav class="">
-    <div x-data="{ show: false, active: 'home'}" class="flex flex-col justify-between w-full items-stretch md:flex-row md:max-w-screen-lg  mx-auto">
+<nav class="px-3">
+    <div x-data="{ show: false, active: 'home'}" class="flex flex-col justify-between w-full items-stretch md:flex-row md:max-w-screen-lg md:items-center mx-auto">
         <div class="flex justify-between items-center">
             <a href="/" class="flex items-center py-2 px-3">
                 <span class="">
-                    <img class="w-20 filter drop-shadow" src="/img/logo.png" />
+                    <img class="w-16 filter drop-shadow" src="/img/logo-mobile.png" />
                 </span>
             </a>
 
